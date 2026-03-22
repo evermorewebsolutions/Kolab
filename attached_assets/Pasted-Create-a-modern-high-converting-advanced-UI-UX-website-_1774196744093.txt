@@ -1,0 +1,86 @@
+Create a modern, high-converting, advanced UI/UX website for an electrical services company called "Kolob Electrical and Projects" based in Cape Town, South Africa.
+
+GOAL:
+The website must look premium, trustworthy, and conversion-focused. It should feel like a top-tier service business that customers can rely on immediately.
+
+STYLE & DESIGN:
+- Clean, modern, and minimal design
+- Dark + electric blue/yellow accent color palette
+- Smooth animations (fade-ins, hover effects, scroll transitions)
+- Glassmorphism or subtle neumorphism elements
+- Professional typography (bold headings, clean readable body text)
+- Mobile-first, fully responsive design
+
+HERO SECTION:
+- Strong headline: "Reliable Electrical Solutions You Can Trust"
+- Subheadline: "Installation, Maintenance, COC Certification & More Across Cape Town"
+- CTA buttons: "Get a Quote" and "Call Now"
+- Background: electrician at work / subtle animated gradient
+
+SECTIONS TO INCLUDE:
+
+1. SERVICES (with icons + cards layout)
+- Electrical Installations
+- Maintenance & Repairs
+- Certificate of Compliance (COC)
+- Fault Finding
+- Residential & Commercial Work
+
+2. WHY CHOOSE US
+- 5.0 Star Rated Service
+- Fast & Reliable
+- Certified Professionals
+- Affordable Pricing
+- Cape Town Based
+
+3. REVIEWS / SOCIAL PROOF
+- Display "5.0 (24 Reviews)"
+- Include testimonial cards with customer quotes
+- Add star rating visuals
+
+4. ABOUT SECTION
+- Brief company description:
+  "Kolob Electrical and Projects is a trusted Cape Town-based electrical company specializing in installations, maintenance, and compliance certification. We are committed to quality, safety, and customer satisfaction."
+
+5. SERVICE AREA
+- Mention Cape Town, Kuils River, Bellville and surrounding areas
+
+6. CONTACT SECTION (VERY IMPORTANT - CONVERSION FOCUSED)
+- Phone: 067 925 0042 (click to call)
+- Address: 45 Van Riebeeck Rd, Kuils River, Cape Town, 7580
+- Google Maps embed
+- Contact form (Name, Phone, Message)
+
+7. CALL TO ACTION SECTION
+- "Need an Electrician Today?"
+- Big bold button: "Call Now" / "Request a Quote"
+
+8. FOOTER
+- Business name
+- Quick links
+- Contact details
+- Copyright
+
+ADVANCED UI FEATURES:
+- Sticky navigation bar
+- Floating WhatsApp button
+- Scroll animations
+- Hover effects on buttons and cards
+- Loading animation
+- Clean section spacing and alignment
+- Subtle shadows and depth
+
+SEO OPTIMIZATION:
+- Use keywords like:
+  "Electrician Cape Town"
+  "Electrical Services Kuils River"
+  "COC Certificate Cape Town"
+- Fast loading performance
+- Proper heading structure (H1, H2, H3)
+
+TECH STACK:
+- Use HTML, Tailwind CSS, and JavaScript (or React if possible)
+- Clean, well-structured, production-ready code
+
+EXTRA:
+Make the design feel like a premium service worth trusting immediately. Focus heavily on conversion (calls and quote requests).

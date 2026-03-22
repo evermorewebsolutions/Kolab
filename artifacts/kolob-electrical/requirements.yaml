@@ -1,0 +1,19 @@
+packages:
+  "framer-motion": "Smooth entry animations and scroll-triggered effects for a premium feel"
+  "react-hook-form": "Form state management for the contact form"
+  "@hookform/resolvers": "Zod validation resolver for the contact form"
+  "clsx": "Utility for constructing className strings conditionally"
+  "tailwind-merge": "Utility to merge tailwind classes without style conflicts"
+
+images:
+  - path: "artifacts/kolob-electrical/public/images/hero-bg.png"
+    description: "Abstract premium dark navy gradient background with subtle electric blue glowing circuit lines and glowing orbs, very high tech and professional"
+    aspect_ratio: "16:9"
+  - path: "artifacts/kolob-electrical/public/images/about-electrician.png"
+    description: "Modern professional electrical breaker panel illuminated by dramatic blue light in a dark premium setting, high quality, 4k"
+    aspect_ratio: "4:3"
+
+notes:
+  - "Single-page application with smooth scrolling navigation"
+  - "Contact form is a functional UI mockup that simulates a network request and shows a success state"
+  - "Dark theme is forced by default as requested in implementation notes"
