@@ -60,7 +60,7 @@ export function About() {
               transition={{ delay: 0.2 }}
               className="text-muted-foreground text-lg mb-6 leading-relaxed"
             >
-              Kolob Electrical and Projects is a trusted Cape Town-based electrical company specializing in high-quality installations, emergency maintenance, and strict compliance certification. 
+              Kolob Electrical and Projects is a trusted Cape Town-based electrical company specializing in high-quality installations, solar panel systems, emergency maintenance, and strict compliance certification.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 10 }}
@@ -81,6 +81,7 @@ export function About() {
             >
               {[
                 "Fully Licensed & Insured Electricians",
+                "Solar PV Installation & Grid-Tie Systems",
                 "Strict Adherence to SANS 10142-1 Standards",
                 "Transparent Upfront Pricing",
                 "24/7 Emergency Support Availability",

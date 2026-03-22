@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { PlugZap, Wrench, ShieldCheck, Search, Building2 } from "lucide-react";
+import { PlugZap, Wrench, ShieldCheck, Search, Building2, Sun } from "lucide-react";
 
 const services = [
   {
@@ -16,6 +16,11 @@ const services = [
     title: "COC Certification",
     description: "Official Certificates of Compliance (COC) for property sales and insurance purposes.",
     icon: ShieldCheck,
+  },
+  {
+    title: "Solar Panel Installation",
+    description: "Professional solar PV system design, installation, and grid-tie setup for homes and businesses across Cape Town.",
+    icon: Sun,
   },
   {
     title: "Fault Finding",
@@ -58,7 +63,7 @@ export function Services() {
             transition={{ delay: 0.2 }}
             className="mt-4 text-muted-foreground"
           >
-            From minor repairs to major installations, our certified team handles all your electrical needs with precision and care.
+            From minor repairs and major installations to complete solar panel systems, our certified team handles all your electrical needs with precision and care.
           </motion.p>
         </div>
 
@@ -70,9 +75,7 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={`glass-card p-8 rounded-2xl group ${
-                index === 3 ? "lg:col-span-1 lg:col-start-2" : ""
-              } ${index === 4 ? "lg:col-span-1 lg:col-start-3" : ""}`}
+              className="glass-card p-8 rounded-2xl group"
             >
               <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
                 <service.icon className="w-7 h-7 text-primary group-hover:text-white transition-colors" />

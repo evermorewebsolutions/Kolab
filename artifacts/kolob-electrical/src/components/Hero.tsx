@@ -51,7 +51,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl leading-relaxed"
           >
-            Expert installation, emergency maintenance, and COC Certification across Cape Town, Kuils River, and Bellville.
+            Expert electrical installations, solar panel systems, maintenance, and COC Certification across Cape Town, Kuils River, and Bellville.
           </motion.p>
 
           <motion.div

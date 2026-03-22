@@ -1,5 +1,17 @@
 # Workspace
 
+## Kolob Electrical and Projects Website (`artifacts/kolob-electrical`)
+
+Premium dark-themed React + Vite marketing site for Kolob Electrical and Projects, Cape Town.
+
+- **Services**: Electrical Installations, Maintenance & Repairs, COC Certification, Solar Panel Installation, Fault Finding, Commercial & Residential
+- **Sections**: Hero, Services, Why Us, Reviews, About, Service Area, Contact (with Google Maps), CTA, Footer
+- **Features**: Sticky nav, floating WhatsApp button, scroll animations (framer-motion), glassmorphism cards, click-to-call links
+- **Netlify-ready**: `netlify.toml` at `artifacts/kolob-electrical/netlify.toml`, `public/_redirects` for SPA routing, build outputs to `dist/public`
+- **SEO**: Solar + electrical keywords, OG tags, structured headings
+
+
+
 ## Overview
 
 pnpm workspace monorepo using TypeScript. Each package manages its own dependencies.
