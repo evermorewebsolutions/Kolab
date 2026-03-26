@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Star, PhoneCall, ArrowRight, ShieldCheck } from "lucide-react";
+import { Star, PhoneCall, ArrowRight, ShieldCheck, Sun } from "lucide-react";
 
 export function Hero() {
   return (
@@ -80,14 +80,18 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="mt-12 flex items-center gap-6 text-sm text-muted-foreground"
+            className="mt-12 flex flex-wrap items-center gap-5 text-sm text-muted-foreground"
           >
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-5 h-5 text-primary" />
               <span>Licensed & Certified</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+              <Sun className="w-5 h-5 text-accent" />
+              <span>Solar Installers</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
               <span>Available for Emergencies</span>
             </div>
           </motion.div>

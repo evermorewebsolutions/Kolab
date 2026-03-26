@@ -16,10 +16,11 @@ export function Navbar() {
 
   const navLinks = [
     { name: "Services", href: "#services" },
-    { name: "Why Us", href: "#why-us" },
+    { name: "Solar", href: "#solar" },
+    { name: "Our Work", href: "#gallery" },
     { name: "Reviews", href: "#reviews" },
     { name: "About", href: "#about" },
-    { name: "Areas", href: "#areas" },
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
