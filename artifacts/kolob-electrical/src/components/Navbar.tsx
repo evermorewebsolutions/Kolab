@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Zap, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function Navbar() {
@@ -27,24 +27,20 @@ export function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-md border-b border-white/10 py-3"
-          : "bg-transparent py-5"
+          ? "bg-background/80 backdrop-blur-md border-b border-white/10 py-2"
+          : "bg-transparent py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <a href="#home" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center shadow-lg shadow-primary/20 group-hover:shadow-primary/40 transition-all">
-              <Zap className="w-6 h-6 text-white fill-white" />
-            </div>
-            <div className="flex flex-col leading-tight">
-              <span className="font-display font-bold text-xl tracking-tight text-white">
-                KOLOB
-              </span>
-              <span className="text-[10px] text-accent font-semibold tracking-widest uppercase">
-                Electrical & Projects
-              </span>
-            </div>
+          <a href="#home" className="flex items-center gap-3 group">
+            <img
+              src={`${import.meta.env.BASE_URL}images/logo.png`}
+              alt="Kolob Electrical and Projects Logo"
+              className={`object-contain transition-all duration-300 drop-shadow-[0_0_12px_rgba(59,130,246,0.5)] group-hover:drop-shadow-[0_0_18px_rgba(59,130,246,0.8)] ${
+                isScrolled ? "h-12 w-auto" : "h-16 w-auto"
+              }`}
+            />
           </a>
 
           {/* Desktop Nav */}
