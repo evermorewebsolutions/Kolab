@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Kolob Electrical and Projects"
+version = "1.0.0"
+id = "artifacts/kolob-electrical-v2"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 26266
+
+[services.development]
+run = "pnpm --filter @workspace/kolob-electrical-v2 run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/kolob-electrical-v2", "run", "build" ]
+publicDir = "artifacts/kolob-electrical-v2/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "26266"
+BASE_PATH = "/"
