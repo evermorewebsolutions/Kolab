@@ -1,5 +1,3 @@
-import { Zap } from "lucide-react";
-
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -8,13 +6,12 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-2">
-            <a href="#home" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                <Zap className="w-5 h-5 text-white fill-white" />
-              </div>
-              <span className="font-display font-bold text-xl text-white">
-                Kolob Electrical
-              </span>
+            <a href="#home" className="inline-flex mb-5 group">
+              <img
+                src={`${import.meta.env.BASE_URL}images/logo.png`}
+                alt="Kolob Electrical and Projects Logo"
+                className="h-20 w-auto object-contain drop-shadow-[0_0_14px_rgba(59,130,246,0.5)] group-hover:drop-shadow-[0_0_22px_rgba(59,130,246,0.8)] transition-all duration-300"
+              />
             </a>
             <p className="text-muted-foreground max-w-sm">
               Your trusted partner for professional electrical installations, maintenance, and compliance certification in Cape Town.
@@ -42,7 +39,8 @@ export function Footer() {
           </div>
         </div>
         
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
+        <div className="divider-glow mb-8" />
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <p>© {currentYear} Kolob Electrical and Projects. All rights reserved.</p>
           <div className="flex gap-4">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>

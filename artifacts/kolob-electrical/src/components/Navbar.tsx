@@ -37,8 +37,8 @@ export function Navbar() {
             <img
               src={`${import.meta.env.BASE_URL}images/logo.png`}
               alt="Kolob Electrical and Projects Logo"
-              className={`object-contain transition-all duration-300 drop-shadow-[0_0_12px_rgba(59,130,246,0.5)] group-hover:drop-shadow-[0_0_18px_rgba(59,130,246,0.8)] ${
-                isScrolled ? "h-12 w-auto" : "h-16 w-auto"
+              className={`object-contain transition-all duration-300 drop-shadow-[0_0_16px_rgba(59,130,246,0.6)] group-hover:drop-shadow-[0_0_28px_rgba(59,130,246,0.9)] ${
+                isScrolled ? "h-16 w-auto" : "h-24 w-auto"
               }`}
             />
           </a>

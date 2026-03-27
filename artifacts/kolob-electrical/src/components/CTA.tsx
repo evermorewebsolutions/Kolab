@@ -39,14 +39,14 @@ export function CTA() {
         >
           <a
             href="tel:0679250042"
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold bg-accent text-accent-foreground shadow-xl hover:shadow-2xl hover:scale-105 transition-all"
+            className="shimmer inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold bg-accent text-accent-foreground shadow-xl hover:shadow-2xl hover:scale-105 transition-all"
           >
             <PhoneCall className="w-5 h-5" />
             Call Now: 067 925 0042
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold bg-black/30 border border-white/20 text-white backdrop-blur-md hover:bg-black/40 transition-all hover:scale-105"
+            className="shimmer inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold bg-black/30 border border-white/20 text-white backdrop-blur-md hover:bg-black/40 transition-all hover:scale-105"
           >
             <Calendar className="w-5 h-5" />
             Request a Quote
