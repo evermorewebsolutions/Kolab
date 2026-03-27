@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Star, PhoneCall, ArrowRight, ShieldCheck, Sun } from "lucide-react";
+import { PhoneCall, ArrowRight, ShieldCheck, Sun } from "lucide-react";
 
 export function Hero() {
   return (
@@ -20,22 +20,6 @@ export function Hero() {
 
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="max-w-3xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-6"
-          >
-            <div className="flex items-center text-accent">
-              <Star className="w-3.5 h-3.5 fill-current" />
-              <Star className="w-3.5 h-3.5 fill-current" />
-              <Star className="w-3.5 h-3.5 fill-current" />
-              <Star className="w-3.5 h-3.5 fill-current" />
-              <Star className="w-3.5 h-3.5 fill-current" />
-            </div>
-            <span className="text-xs font-semibold text-white/90">5.0 Rated Service in Cape Town</span>
-          </motion.div>
-
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
