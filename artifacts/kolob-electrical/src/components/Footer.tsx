@@ -47,6 +47,10 @@ export function Footer() {
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
         </div>
+        <div className="mt-6 text-center text-xs text-muted-foreground/60">
+          Made with ❤️ in South Africa by{" "}
+          <span className="text-muted-foreground hover:text-white transition-colors font-medium">Evermore Digital Solutions</span>
+        </div>
       </div>
     </footer>
   );

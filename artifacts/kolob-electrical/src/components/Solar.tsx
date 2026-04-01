@@ -79,7 +79,7 @@ export function Solar() {
             className="relative rounded-2xl overflow-hidden shadow-2xl group"
           >
             <img
-              src={`${import.meta.env.BASE_URL}images/solar-install.jpg`}
+              src={`${import.meta.env.BASE_URL}images/solar-hilltop-01.jpg`}
               alt="Kolob Electrical solar panel installation on Cape Town rooftop"
               className="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 group-hover:scale-105"
             />

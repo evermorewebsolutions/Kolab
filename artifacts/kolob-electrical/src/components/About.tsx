@@ -20,7 +20,7 @@ export function About() {
           >
             <div className="absolute inset-0 bg-primary/10 mix-blend-overlay z-10" />
             <img
-              src={`${import.meta.env.BASE_URL}images/db-board-commercial.jpg`}
+              src={`${import.meta.env.BASE_URL}images/db-board-wiring.jpg`}
               alt="Professional electrical DB board installation by Kolob Electrical"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />

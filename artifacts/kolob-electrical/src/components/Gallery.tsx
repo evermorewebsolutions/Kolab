@@ -11,8 +11,19 @@ const projects = [
   { src: "project-06.jpg", alt: "Commercial electrical project", label: "Commercial Work", category: "Electrical" },
   { src: "project-07.jpg", alt: "Circuit board installation", label: "Circuit Install", category: "Electrical" },
   { src: "project-08.jpg", alt: "Outdoor electrical work", label: "Outdoor Wiring", category: "Electrical" },
-  { src: "project-09.jpg", alt: "Solar panel system installation", label: "Solar System", category: "Solar" },
-  { src: "project-10.jpg", alt: "DB board installation", label: "DB Board", category: "Electrical" },
+  { src: "solar-commercial-aerial.jpg", alt: "Aerial view of commercial solar array", label: "Commercial Solar Array", category: "Solar" },
+  { src: "solar-rail-mount.jpg", alt: "Solar rail mounting system on tile roof", label: "Roof Rail Install", category: "Solar" },
+  { src: "solar-rail-mountain.jpg", alt: "Solar mounting framework with mountain view", label: "Panel Framework", category: "Solar" },
+  { src: "solar-panels-cloudy.jpg", alt: "Solar panels installed on residential roof", label: "Solar Panel Install", category: "Solar" },
+  { src: "solar-hilltop-02.jpg", alt: "Solar installation on Cape Town mountainside", label: "Mountain Solar", category: "Solar" },
+  { src: "battery-sunsynk.jpg", alt: "Sunsynk inverter and Freedom Lite batteries", label: "Sunsynk Battery System", category: "Solar" },
+  { src: "commercial-lab-lighting.jpg", alt: "Large commercial LED lighting installation", label: "Commercial Lighting", category: "Lighting" },
+  { src: "victron-battery-garage.jpg", alt: "Victron MultiPlus inverters and battery storage", label: "Victron Energy System", category: "Solar" },
+  { src: "slbatt-wall-large.jpg", alt: "SL3Batt battery wall installation", label: "Battery Storage Wall", category: "Solar" },
+  { src: "multiplus-slbatt.jpg", alt: "MultiPlus inverters with SL3Batt batteries", label: "MultiPlus System", category: "Solar" },
+  { src: "multiplus-slbatt-2.jpg", alt: "MultiPlus 2 inverters with SL3Batt backup", label: "Backup Power System", category: "Solar" },
+  { src: "multiplus-lite-battery.jpg", alt: "MultiPlus inverters with Lite batteries", label: "Energy Storage", category: "Solar" },
+  { src: "slbatt-5units.jpg", alt: "Five SL3Batt units with Victron inverters", label: "Large Battery Bank", category: "Solar" },
   { src: "project-11.jpg", alt: "Lighting installation", label: "Lighting Install", category: "Lighting" },
   { src: "project-12.jpg", alt: "Electrical maintenance", label: "Maintenance", category: "Electrical" },
   { src: "project-13.jpg", alt: "Industrial electrical work", label: "Industrial Project", category: "Electrical" },
@@ -123,8 +134,8 @@ export function Gallery() {
           ))}
         </motion.div>
 
-        {/* Masonry-style grid */}
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+        {/* Responsive grid — 2 cols mobile, 3 cols desktop */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
           <AnimatePresence>
             {filtered.map((project, idx) => {
               const globalIdx = projects.findIndex((p) => p.src === project.src);
@@ -135,28 +146,30 @@ export function Gallery() {
                   initial={{ opacity: 0, scale: 0.92 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.88 }}
-                  transition={{ duration: 0.35, delay: idx * 0.04 }}
-                  className="break-inside-avoid mb-4 relative rounded-2xl overflow-hidden group cursor-pointer"
+                  transition={{ duration: 0.3, delay: Math.min(idx * 0.03, 0.3) }}
+                  className="relative rounded-xl md:rounded-2xl overflow-hidden group cursor-pointer aspect-[4/3]"
                   onClick={() => openLightbox(globalIdx)}
                 >
                   <img
                     src={`${import.meta.env.BASE_URL}images/${project.src}`}
                     alt={project.alt}
-                    className="w-full h-auto block transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                   />
                   {/* Gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  {/* Zoom icon */}
-                  <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 scale-75 group-hover:scale-100">
+                  {/* Always-visible subtle bottom fade on mobile */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-100 md:opacity-0" />
+                  {/* Zoom icon — desktop only */}
+                  <div className="hidden md:flex absolute top-3 right-3 w-9 h-9 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 scale-75 group-hover:scale-100">
                     <ZoomIn className="w-4 h-4 text-white" />
                   </div>
                   {/* Label */}
-                  <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                    <span className={`text-xs font-semibold border rounded-full px-3 py-1 ${categoryColors[project.category] ?? "text-white border-white/20 bg-white/10"}`}>
+                  <div className="absolute bottom-0 left-0 right-0 p-2 md:p-4 md:translate-y-2 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 md:transition-all md:duration-300">
+                    <p className="text-white font-semibold text-xs md:text-sm drop-shadow-md leading-tight">{project.label}</p>
+                    <span className={`hidden md:inline-block text-xs font-semibold border rounded-full px-2 py-0.5 mt-1 ${categoryColors[project.category] ?? "text-white border-white/20 bg-white/10"}`}>
                       {project.category}
                     </span>
-                    <p className="text-white font-bold mt-2 text-sm drop-shadow-md">{project.label}</p>
                   </div>
                 </motion.div>
               );
@@ -208,7 +221,7 @@ export function Gallery() {
 
             {/* Prev */}
             <button
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-colors z-10"
+              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-colors z-10"
               onClick={(e) => { e.stopPropagation(); goPrev(); }}
             >
               <ChevronLeft className="w-6 h-6" />
@@ -216,7 +229,7 @@ export function Gallery() {
 
             {/* Next */}
             <button
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-colors z-10"
+              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-colors z-10"
               onClick={(e) => { e.stopPropagation(); goNext(); }}
             >
               <ChevronRight className="w-6 h-6" />
