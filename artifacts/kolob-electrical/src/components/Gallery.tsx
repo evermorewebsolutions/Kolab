@@ -35,12 +35,6 @@ const projects = [
   { src: "project-19.jpg", alt: "Cape Town solar project", label: "Cape Town Solar", category: "Solar" },
 ];
 
-const categoryColors: Record<string, string> = {
-  Solar: "text-accent border-accent/30 bg-accent/10",
-  Electrical: "text-primary border-primary/30 bg-primary/10",
-  Lighting: "text-emerald-400 border-emerald-400/30 bg-emerald-400/10",
-};
-
 const FILTERS = ["All", "Electrical", "Solar", "Lighting"];
 
 export function Gallery() {
@@ -158,18 +152,11 @@ export function Gallery() {
                   />
                   {/* Gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  {/* Always-visible subtle bottom fade on mobile */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-100 md:opacity-0" />
-                  {/* Zoom icon — desktop only */}
-                  <div className="hidden md:flex absolute top-3 right-3 w-9 h-9 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 scale-75 group-hover:scale-100">
-                    <ZoomIn className="w-4 h-4 text-white" />
-                  </div>
-                  {/* Label */}
-                  <div className="absolute bottom-0 left-0 right-0 p-2 md:p-4 md:translate-y-2 md:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 md:transition-all md:duration-300">
-                    <p className="text-white font-semibold text-xs md:text-sm drop-shadow-md leading-tight">{project.label}</p>
-                    <span className={`hidden md:inline-block text-xs font-semibold border rounded-full px-2 py-0.5 mt-1 ${categoryColors[project.category] ?? "text-white border-white/20 bg-white/10"}`}>
-                      {project.category}
-                    </span>
+                  {/* Zoom icon on hover */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="w-10 h-10 rounded-full bg-white/15 backdrop-blur-sm border border-white/30 flex items-center justify-center">
+                      <ZoomIn className="w-5 h-5 text-white" />
+                    </div>
                   </div>
                 </motion.div>
               );
@@ -250,12 +237,6 @@ export function Gallery() {
                 alt={projects[lightboxIdx].alt}
                 className="max-w-full max-h-[80vh] rounded-xl object-contain shadow-2xl"
               />
-              <div className="flex items-center gap-3">
-                <span className={`text-xs font-semibold border rounded-full px-3 py-1 ${categoryColors[projects[lightboxIdx].category] ?? "text-white border-white/20 bg-white/10"}`}>
-                  {projects[lightboxIdx].category}
-                </span>
-                <span className="text-white font-bold text-sm">{projects[lightboxIdx].label}</span>
-              </div>
             </motion.div>
           </motion.div>
         )}
