@@ -24,7 +24,7 @@ const projects = [
   { src: "multiplus-slbatt-2.jpg", alt: "MultiPlus 2 inverters with SL3Batt backup", label: "Backup Power System", category: "Solar" },
   { src: "multiplus-lite-battery.jpg", alt: "MultiPlus inverters with Lite batteries", label: "Energy Storage", category: "Solar" },
   { src: "slbatt-5units.jpg", alt: "Five SL3Batt units with Victron inverters", label: "Large Battery Bank", category: "Solar" },
-  { src: "project-11.jpg", alt: "Lighting installation", label: "Lighting Install", category: "Lighting" },
+  { src: "db-board-new.jpg", alt: "Clean DB board installation", label: "DB Board Install", category: "Electrical" },
   { src: "project-12.jpg", alt: "Electrical maintenance", label: "Maintenance", category: "Electrical" },
   { src: "project-13.jpg", alt: "Industrial electrical work", label: "Industrial Project", category: "Electrical" },
   { src: "project-14.jpg", alt: "Solar backup system", label: "Backup Power", category: "Solar" },
